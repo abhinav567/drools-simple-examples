@@ -5,7 +5,7 @@ groceryDiscount
 
 package com.example
 
-import model.Product
+import domain.Product
 
 global String CATEGORY_JEWELLERY
 global String CATEGORY_GROCERY
