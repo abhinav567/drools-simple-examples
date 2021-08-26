@@ -1,0 +1,31 @@
+template header
+
+jewelleryDiscount
+groceryDiscount
+
+package com.example
+
+import model.Product
+
+global String CATEGORY_JEWELLERY
+global String CATEGORY_GROCERY
+
+template "product discount"
+
+rule "Jewellery Discount"
+ dialect "java"
+when
+  $p1 : Product(category == CATEGORY_JEWELLERY)
+then
+  $p1.discount(@{jewelleryDiscount});
+end
+
+rule "Grocery Discount"
+ dialect "java"
+when
+  $p2 : Product(category == CATEGORY_GROCERY)
+then
+  $p2.discount(@{groceryDiscount});
+end
+
+end template
