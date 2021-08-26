@@ -1,5 +1,4 @@
-import model.Patient;
-import model.Person;
+import domain.Patient;
 import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;

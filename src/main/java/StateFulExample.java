@@ -1,20 +1,12 @@
 
-import model.Applicant;
-import model.Fire;
-import model.Room;
-import model.Sprinkler;
+import domain.Fire;
+import domain.Room;
 import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
-import org.kie.api.runtime.StatelessKieSession;
 import org.kie.api.runtime.rule.FactHandle;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
-
-import static org.assertj.core.api.Assertions.*;
 
 public class StateFulExample {
 

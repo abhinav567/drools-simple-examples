@@ -1,7 +1,7 @@
 
-import model.Fire
-import model.Room
-import model.Alarm
+import domain.Fire
+import domain.Room
+import domain.Alarm
 
 global String ANSI_RED
 global String ANSI_RESET

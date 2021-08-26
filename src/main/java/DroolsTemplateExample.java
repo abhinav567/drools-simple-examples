@@ -1,4 +1,4 @@
-import model.Product;
+import domain.Product;
 import org.kie.api.builder.Message;
 import org.kie.api.builder.Results;
 import org.kie.api.io.ResourceType;
@@ -25,7 +25,7 @@ public class DroolsTemplateExample {
     public void tryout() throws IOException {
 
         //Generate drl string from template
-        InputStream inputStream = ClassLoader.class.getResourceAsStream("/droolstemplate.drl");
+        InputStream inputStream = ClassLoader.class.getResourceAsStream("/droolsTemplate.txt");
         if(inputStream == null){
             throw new IOException("Failed to locate drl file");
         }

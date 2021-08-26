@@ -1,9 +1,7 @@
-import model.Activation;
-import model.LoanApplication;
+import domain.LoanApplication;
 import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
-import org.kie.api.runtime.rule.Agenda;
 
 public class ModifyActionExample {
 

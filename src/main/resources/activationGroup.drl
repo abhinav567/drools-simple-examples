@@ -1,6 +1,6 @@
 package com.example
 
-import model.Activation
+import domain.Activation
 
 rule "rule 1"
   activation-group "test"

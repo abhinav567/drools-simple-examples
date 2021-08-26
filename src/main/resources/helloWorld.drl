@@ -1,9 +1,8 @@
 package com.example
 
-import model.Person
+import domain.Person
 
 rule "Hello"
- dialect "java"
 when
   $p : Person()
 then

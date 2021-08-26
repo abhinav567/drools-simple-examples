@@ -1,9 +1,8 @@
 package com.example
 
-import model.LoanApplication
+import domain.LoanApplication
 
 rule "Approve loan application less than 100"
- dialect "java"
 when
   $l : LoanApplication( amount < 100)
 then
@@ -13,7 +12,6 @@ then
 end
 
 rule "Approve loan application more than 100"
- dialect "java"
 when
   $l : LoanApplication( amount > 100)
 then
@@ -24,7 +22,6 @@ then
 end
 
 rule "Print approved"
- dialect "java"
 when
   $l : LoanApplication( approved == true)
 then

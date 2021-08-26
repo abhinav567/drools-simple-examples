@@ -1,6 +1,6 @@
 package com.example
 
-import model.Patient
+import domain.Patient
 
 rule "Blood Test"
   agenda-group "test"
