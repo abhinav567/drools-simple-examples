@@ -1,0 +1,32 @@
+
+import model.Fire
+import model.Room
+import model.Alarm
+
+global String ANSI_RED
+global String ANSI_RESET
+global String ANSI_GREEN
+
+rule "When there is a fire at a room"
+when
+  Fire($room : room)
+then
+  System.out.println( ANSI_RED + "Fire at "+$room.getName() + ANSI_RESET );
+end
+
+rule "Raise the alarm when we have one or more fires"
+when
+    exists Fire()
+then
+    insert( new Alarm() );
+    System.out.println( ANSI_RED + "Alarm raised" + ANSI_RESET );
+end
+
+rule "Cancel the alarm when all the fires have gone"
+when
+    not Fire()
+    $alarm : Alarm()
+then
+    delete( $alarm );
+    System.out.println( ANSI_GREEN + "Alarm cancelled" + ANSI_RESET );
+end

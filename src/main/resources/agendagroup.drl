@@ -1,0 +1,27 @@
+package com.example
+
+import model.Patient
+
+rule "Blood Test"
+  agenda-group "test"
+when
+  $p : Patient()
+then
+  System.out.println( "Doing blood test for " + $p.getName() );
+end
+
+rule "ECG Test"
+  agenda-group "test"
+when
+  $p : Patient()
+then
+  System.out.println( "Doing ECG for " + $p.getName() );
+end
+
+rule "Generate Report"
+  agenda-group "report"
+when
+  $p : Patient()
+then
+  System.out.println( "Generated Report for " + $p.getName() );
+end

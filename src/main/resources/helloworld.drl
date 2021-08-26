@@ -1,0 +1,11 @@
+package com.example
+
+import model.Person
+
+rule "Hello"
+ dialect "java"
+when
+  $p : Person()
+then
+  System.out.println( "Hello " + $p.getName() );
+end

@@ -1,0 +1,21 @@
+package com.example
+
+import model.Activation
+
+rule "rule 1"
+  activation-group "test"
+  salience 5
+when
+  $p : Activation()
+then
+  System.out.println( "rule 1 activated" );
+end
+
+rule "rule 2"
+  activation-group "test"
+  salience 10
+when
+  $p : Activation()
+then
+  System.out.println( "rule 2 activated" );
+end
