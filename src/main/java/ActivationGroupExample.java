@@ -12,8 +12,6 @@ public class ActivationGroupExample {
 
         KieSession ksession = kContainer.newKieSession();
 
-        Agenda agenda = ksession.getAgenda();
-
         Activation activation = new Activation();
         ksession.insert(activation);
         ksession.fireAllRules();
